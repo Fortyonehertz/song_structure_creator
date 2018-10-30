@@ -1,0 +1,29 @@
+<mat-card class="initial-content">
+  <mat-card-title>
+
+  </mat-card-title>
+  <mat-card-content>
+    <form class="initial-input-form">
+      
+      <label class="form-labels">Desired BPM</label>
+      <mat-form-field id="bpm" class="initial-input-fields">
+          
+        <input matInput type="number" [(ngModel)]="bpm" (change)="setBPM()" name="bpm-input">
+      </mat-form-field>
+
+      <label class="form-labels">Desired Song Duration</label> <br>
+    <p style="float:left;">{{time}}</p> <mat-slider min="0" max="10000000" [(ngModel)]="timeScalar" name="timeScalarSlider" (change)="scaleTime(timeScalar/100)"></mat-slider> 
+
+     
+    </form> 
+
+    <button mat-raised-button (click)="calculateBars()">Calculate Bars</button>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>
+
+<br><br>
+<div *ngIf="barsCalculated">
+    <h1>{{bars}} Bars</h1>
+</div>

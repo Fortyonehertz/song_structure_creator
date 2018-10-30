@@ -1,0 +1,42 @@
+.initial-content {
+    margin-top: 1em;
+    margin-left: 35%;
+    align-content: center;
+    width: 30%;
+}
+
+.initial-input-form {
+    font-size: 1.1em;
+    width: 100%;
+    align-content: left;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-slider {
+    width: 100%;
+}
+
+.matInput {
+    text-align: center;
+    align-content: center;
+}
+
+.duration-label {
+    float: left;
+}
+
+.form-labels {
+    left: 0;
+    float: left;
+}
+
+#bpm {
+    width: 98%;
+    padding-left: 1%;
+}
+
+h1 {
+    color: #009688;
+}

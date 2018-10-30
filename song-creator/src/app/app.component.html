@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <mat-toolbar class="toolbar">
+      <span class="actions">
+          <button mat-button class="burger-button" (click)=toggleSideNav() color="accent"><i class="material-icons">menu</i></button>
+      </span>
+      <span>
+          <p class="title">Gimme Structure</p>
+          
+      </span>
+      <span class="subtitle">
+          <p class="subtitle">A helpful tool for creating new song forms.</p>
+      </span>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+        <mat-list  role="list" >
+            <mat-list-item class="nav-links" role="listitem" routerLink="/new-structure">New Structure</mat-list-item>
+            <mat-list-item class="nav-links" role="listitem">Saved Structures</mat-list-item>
+            <mat-list-item class="nav-links" role="listitem">About</mat-list-item>
+            <mat-list-item class="nav-links" role="listitem">Contact</mat-list-item>
+          </mat-list>          
+    </mat-sidenav>
+
+    
+    
+
+    <mat-sidenav-content>
+      
+        
+      
+      
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
