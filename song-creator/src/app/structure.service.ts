@@ -10,8 +10,7 @@ export class StructureService {
   minutes: number = 0;
   bars: number = 0;
   beatsPerBar: number = 4;
-
-  constructor() { }
+  totalBeats: number = 0;
 
   setBPM(bpm: number) {
     this.bpm = bpm;
@@ -37,9 +36,11 @@ export class StructureService {
     console.log("Beats Per Bar: " + this.beatsPerBar);
     var beatsPerSecond = Math.round(this.bpm/60);
     var totalSeconds = (this.minutes * 60) + this.seconds;
-    var totalBeats =  beatsPerSecond * totalSeconds;
-    var roundedBeats = totalBeats - (totalBeats % this.beatsPerBar);
+    this.totalBeats =  beatsPerSecond * totalSeconds;
+    console.log("Total beats: " + this.totalBeats);
+    var roundedBeats = this.totalBeats - (this.totalBeats % this.beatsPerBar);
     this.bars = roundedBeats/this.beatsPerBar;
+    this.totalBeats = this.beatsPerBar * this.bars;
     console.log("Bars: " + this.bars);
     return this.bars;
   }

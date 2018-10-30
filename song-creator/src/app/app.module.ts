@@ -10,11 +10,13 @@ import { InitialInputComponent } from './initial-input/initial-input.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialCustomModule} from './material-custom.module';
+import { MidiGeneratorComponent } from './midi-generator/midi-generator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InitialInputComponent
+    InitialInputComponent,
+    MidiGeneratorComponent
   ],
   imports: [
     BrowserModule,

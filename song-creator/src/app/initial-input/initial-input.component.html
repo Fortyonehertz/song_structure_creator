@@ -12,9 +12,15 @@
       </mat-form-field>
 
       <label class="form-labels">Desired Song Duration</label> <br>
-    <p style="float:left;">{{time}}</p> <mat-slider min="0" max="10000000" [(ngModel)]="timeScalar" name="timeScalarSlider" (change)="scaleTime(timeScalar/100)"></mat-slider> 
-
+      <p style="float:left;">{{time}}</p> <mat-slider min="0" max="10000000" [(ngModel)]="timeScalar" name="timeScalarSlider" (change)="scaleTime(timeScalar/100)"></mat-slider> 
+      
      
+      <label class="form-labels">Beats Per Bar</label>
+      <mat-form-field id="Beats Per Bar" class="initial-input-fields">
+          
+        <input matInput type="number" [(ngModel)]="beatsPerBar" (change)="setTimeSignature()" name="beatsPerBar-input">
+      </mat-form-field>
+
     </form> 
 
     <button mat-raised-button (click)="calculateBars()">Calculate Bars</button>
@@ -25,5 +31,6 @@
 
 <br><br>
 <div *ngIf="barsCalculated">
-    <h1>{{bars}} Bars</h1>
+    <h1>{{bars}} Bars</h1><br><br>
+    <button mat-raised-button (click)="generate()">Download Midi Timing File</button>
 </div>
