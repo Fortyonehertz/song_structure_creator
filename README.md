@@ -1,2 +1,2 @@
 # song_structure_creator
-Webapp to helps musician plan out a song structure.
+Webapp that helps musicians plan out a song structure by generating downloadable midi files tailored to a desired BPM and song length.
